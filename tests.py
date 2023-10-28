@@ -13,7 +13,7 @@ from datasets import load_dataset
 # print(dataset)
 
 
-model_id = "codellama/CodeLlama-13b-Instruct-hf"
+model_id = "codellama/CodeLlama-7b-Instruct-hf"
 # model_id = "Transform72/PandasSolver"
 quantization_config = BitsAndBytesConfig(
    load_in_4bit=True,
@@ -34,10 +34,11 @@ model = AutoModelForCausalLM.from_pretrained(
 
 user = """Pandas dataframe 'df' is already initialized and filled with data.
             1.Select 5 maximal values from column 'GDP' and store them to 'tmp' variable.
-            2.Print the last of five values plus 2.
+            2.Barplot these values.
             Here is the start of the code:
             '''
             import pandas as pd
+            import matplotlib.pyplot as plt
 
             # 'df' has already been initialized and filled
 

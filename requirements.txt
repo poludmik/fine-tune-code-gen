@@ -3,3 +3,4 @@ accelerate
 bitsandbytes
 scipy
 datasets
+matplotlib
